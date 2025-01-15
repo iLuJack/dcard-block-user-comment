@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Dcard Comment Blocker",
+    "version": "1.0",
+    "description": "Block and hide comments from specific Dcard users",
+    "author": "Your Name",
+    "permissions": [
+        "storage",
+        "activeTab"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.dcard.tw/*"],
+            "js": ["content.js"],
+            "run_at": "document_start"
+        }
+    ]
+}
