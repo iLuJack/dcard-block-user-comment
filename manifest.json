@@ -1,9 +1,9 @@
 {
     "manifest_version": 3,
-    "name": "Dcard Comment Blocker",
+    "name": "Dcard 留言封鎖小工具",
     "version": "1.0",
-    "description": "Block and hide comments from specific Dcard users",
-    "author": "Your Name",
+    "description": "隱藏您封鎖對象的留言",
+    "author": "iLuJack",
     "permissions": [
         "storage",
         "activeTab"

@@ -20,7 +20,6 @@ class UserBlocker {
             this.renderUserList(blocked_users);
         } catch (error) {
             console.error('Error loading blocked users:', error);
-            this.showError('Failed to load blocked users');
         }
     }
 
@@ -45,7 +44,7 @@ class UserBlocker {
         return `
             <div class="user-item">
                 <span>${this.sanitizeUsername(username)}</span>
-                <button class="remove-btn" data-username="${username}">Remove</button>
+                <button class="remove-btn" data-username="${username}">刪除</button>
             </div>
         `;
     }

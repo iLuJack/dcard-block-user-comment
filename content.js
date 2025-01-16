@@ -19,7 +19,21 @@ async function isBlockedUsername(username) {
 function hideComment(element) {
     if (element) {
         console.log('Hiding comment container:', element);
-        element.style.cssText = 'display: none !important; visibility: hidden !important;';
+        // Make hiding more aggressive with !important and multiple properties
+        element.style.cssText = `
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            position: absolute !important;
+            z-index: -9999 !important;
+            width: 0 !important;
+            height: 0 !important;
+            overflow: hidden !important;
+            pointer-events: none !important;
+        `;
+        
+        // Also add a class for redundancy
+        element.classList.add('dcard-comment-blocked');
     }
 }
 // Function to extract usernames and hide blocked comments
